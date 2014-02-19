@@ -1,0 +1,38 @@
+#grid {
+	height: 590px;
+	width: 550px;
+	margin: 0 auto;
+	margin-top : 50px;
+	padding: 5px;
+	background-color : #D1D0CE;
+}
+table{
+	border-collapse:collapse;
+}
+table td {
+	border: 1px solid #878787;
+	width : 8px;
+	height: 8px;
+}
+table td:hover {
+	background-color: #000000;
+}
+#topPanel {
+	height: 35px;
+	background-color : #D1D0CE;
+}
+#buttons {
+	margin: 0 auto;
+	width: 443px;
+}
+.button {
+	margin-top:5px;
+	margin-bottom : 5px;
+}
+#step {
+	float: left;
+	margin: 0px;
+	margin-top: 5px;
+	padding: 0px;
+	color: #545454;
+}

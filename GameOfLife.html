@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="GameOfLife.js"></script>
+<script>
+$(document).ready(function() {
+	init();
+	drawTheGrid();
+	for(var i=1; i<=size; i++) {
+		$("."+i).click(function(){
+			var i = $(this).parent().attr("id");
+			var j = $(this).attr("class");
+			if(grid[i][j] == false) {
+				grid[i][j] = true;
+				$(this).css("background-color","#000000");
+			}
+			else {
+				grid[i][j] = false;
+				$(this).css("background-color","transparent");
+			}
+		});
+	}
+});
+</script>
+<link rel="stylesheet" type="text/css" href="GameOfLife.css">
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<title>Game Of Life</title>
+</head>
+<body>
+<div id='grid'>
+	<div id='topPanel'>
+		<span id="step"></span>
+		<div id='buttons'>
+		<button class='button' onclick="start()">Start</button>
+		<button class='button' onclick="stop()">Stop</button>
+		<button class='button' onclick="step()">Step</button>
+		<button class='button' onclick="speedUp()">Speed Up</button>
+		<button class='button' onclick="slowDown()">Slow Down</button>
+		<button class='button' onclick="reset()">Reset</button>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html> 
